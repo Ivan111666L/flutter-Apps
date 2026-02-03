@@ -12,7 +12,7 @@ dependencies:
   figma:
     git:
       url: https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git
-      ref: main
+      ref: efa7340f819d4e9b370bc21ca0faa5d27e4411f0
 
 dev_dependencies:
   flutter_test:

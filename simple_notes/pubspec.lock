@@ -109,8 +109,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: main
-      resolved-ref: "4e77d19e860e137db747c3e155e9009cb576df75"
+      ref: efa7340f819d4e9b370bc21ca0faa5d27e4411f0
+      resolved-ref: efa7340f819d4e9b370bc21ca0faa5d27e4411f0
       url: "https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git"
     source: git
     version: "1.0.0+1"

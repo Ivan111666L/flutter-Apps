@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:figma/index.dart';
 
 void main() {
   runApp(const NotesApp());
@@ -33,6 +34,7 @@ class NotesApp extends StatelessWidget {
     );
   }
 }
+
 class NotesListPage extends StatefulWidget {
   const NotesListPage({super.key});
 
@@ -155,17 +157,9 @@ class IntegrationScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Integración'),
-      ),
-      body: const Center(
-        child: Text(
-          'Aquí se integrará la otra app en el futuro.',
-          style: TextStyle(fontSize: 35),
-        ),
-      ),
-    );
+    return const HomePageWidget(
+        // Additional configuration as needed
+        );
   }
 }
 
@@ -185,8 +179,10 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
   @override
   void initState() {
     super.initState();
-    _titleController = TextEditingController(text: widget.existingNote?.title ?? '');
-    _contentController = TextEditingController(text: widget.existingNote?.content ?? '');
+    _titleController =
+        TextEditingController(text: widget.existingNote?.title ?? '');
+    _contentController =
+        TextEditingController(text: widget.existingNote?.content ?? '');
   }
 
   @override
@@ -206,7 +202,8 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
     }
 
     final note = Note(
-      id: widget.existingNote?.id ?? DateTime.now().millisecondsSinceEpoch.toString(),
+      id: widget.existingNote?.id ??
+          DateTime.now().millisecondsSinceEpoch.toString(),
       title: title,
       content: content,
       date: DateTime.now(),
