@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  figma:
+    git:
+      url: https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
