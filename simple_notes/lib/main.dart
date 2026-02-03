@@ -33,7 +33,6 @@ class NotesApp extends StatelessWidget {
     );
   }
 }
-
 class NotesListPage extends StatefulWidget {
   const NotesListPage({super.key});
 
@@ -78,12 +77,29 @@ class _NotesListPageState extends State<NotesListPage> {
     }
   }
 
+  // Navigate to external integration scaffold
+  void _openIntegrationScaffold() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const IntegrationScaffold(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mis Notas'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.link),
+            tooltip: 'Integración',
+            onPressed: _openIntegrationScaffold,
+          ),
+        ],
       ),
       body: _notes.isEmpty
           ? const Center(
@@ -128,6 +144,26 @@ class _NotesListPageState extends State<NotesListPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => _openNoteEditor(),
         child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+// Placeholder scaffold for future external app integration
+class IntegrationScaffold extends StatelessWidget {
+  const IntegrationScaffold({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Integración'),
+      ),
+      body: const Center(
+        child: Text(
+          'Aquí se integrará la otra app en el futuro.',
+          style: TextStyle(fontSize: 35),
+        ),
       ),
     );
   }
