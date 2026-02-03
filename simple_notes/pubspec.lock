@@ -110,7 +110,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "536c67f72f34b5037a602a96550f56f830d921b2"
+      resolved-ref: "4e77d19e860e137db747c3e155e9009cb576df75"
       url: "https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git"
     source: git
     version: "1.0.0+1"
