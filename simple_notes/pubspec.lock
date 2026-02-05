@@ -89,6 +89,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  easy_debounce:
+    dependency: transitive
+    description:
+      name: easy_debounce
+      sha256: "476ea3a9062023be76d9d3f48188af75137ad0b57bc250a0fb7adcc471923f51"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
+  equatable:
+    dependency: transitive
+    description:
+      name: equatable
+      sha256: "567c64b3cb4cf82397aac55f4f0cbd3ca20d77c6c03bedbc4ceaddc08904aef7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.7"
   fake_async:
     dependency: transitive
     description:
@@ -109,8 +125,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: efa7340f819d4e9b370bc21ca0faa5d27e4411f0
-      resolved-ref: efa7340f819d4e9b370bc21ca0faa5d27e4411f0
+      ref: ba20387cc33e283fea0858e535fb629ce003fe69
+      resolved-ref: ba20387cc33e283fea0858e535fb629ce003fe69
       url: "https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git"
     source: git
     version: "1.0.0+1"
@@ -218,10 +234,10 @@ packages:
     dependency: transitive
     description:
       name: http
-      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
+      sha256: "2c11f3f94c687ee9bad77c171151672986360b2b001d109814ee7140b2cf261b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.0"
+    version: "1.4.0"
   http_parser:
     dependency: transitive
     description:
@@ -326,6 +342,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.0"
+  mime_type:
+    dependency: transitive
+    description:
+      name: mime_type
+      sha256: "2ad6e67d3d2de9ac0f8ef5352d998fd103cb21351ae8c02fb0c78b079b37d275"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   nested:
     dependency: transitive
     description:

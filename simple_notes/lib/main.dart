@@ -1,5 +1,8 @@
+import 'package:figma/pages/ask_oracle_page/ask_oracle_page_widget.dart';
+import 'package:figma/pages/home_page/home_page_widget.dart';
+import 'package:figma/components/micro_app_card_widget.dart';
+import 'package:figma/components/mini_app_home_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:figma/index.dart';
 
 void main() {
   runApp(const NotesApp());
@@ -157,9 +160,22 @@ class IntegrationScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomePageWidget(
-        // Additional configuration as needed
-        );
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Integración'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: MiniAppHomeWidget(
+        onOracleTap: () async {
+          // Aquí la SuperApp toma el control y usa su propio Navigator
+          await Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const AskOraclePageWidget()),
+          );
+        },
+      ),
+    );
   }
 }
 
