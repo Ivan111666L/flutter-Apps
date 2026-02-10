@@ -2,7 +2,17 @@ import 'package:figma/pages/ask_oracle_page/ask_oracle_page_widget.dart';
 import 'package:figma/pages/home_page/home_page_widget.dart';
 import 'package:figma/components/micro_app_card_widget.dart';
 import 'package:figma/components/mini_app_home_widget.dart';
+
+import 'package:figma/components/cookie_clicker_goto_widget.dart';
+import 'package:figma/components/simple_chat_goto_widget.dart';
+
 import 'package:flutter/material.dart';
+
+// Importación del chatbot y cookie clicker
+import 'package:chatbot_cun8yn/pages/home_page/home_page_widget.dart'
+    as chatbot;
+import 'package:cookie_clicker_ycf4xw/pages/home_page/home_page_widget.dart'
+    as cookie_clicker;
 
 void main() {
   runApp(const NotesApp());
@@ -165,15 +175,55 @@ class IntegrationScaffold extends StatelessWidget {
         title: const Text('Integración'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: MiniAppHomeWidget(
-        onOracleTap: () async {
-          // Aquí la SuperApp toma el control y usa su propio Navigator
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const AskOraclePageWidget()),
-          );
-        },
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              // Oracle widget arriba
+              MiniAppHomeWidget(
+                onOracleTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AskOraclePageWidget()),
+                  );
+                },
+              ),
+              const SizedBox(height: 16),
+              // Chat Bot y Cookie Clicker abajo en fila
+              Row(
+                children: [
+                  Expanded(
+                    child: SimpleChatGotoWidget(
+                      onChatBotTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const chatbot.HomePageWidget()),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: CookieClickerGotoWidget(
+                      onCookieClickerTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const cookie_clicker.HomePageWidget()),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,7 +1,7 @@
 name: simple_notes
 description: A simple note taking app.
 publish_to: 'none'
-version: 1.0.0+4
+version: 1.1.0+1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -12,7 +12,7 @@ dependencies:
   figma:
     git:
       url: https://github.com/Kevinsansuor/flutterflow-noticias-test-packages.git
-      ref: ba20387cc33e283fea0858e535fb629ce003fe69
+      ref: b8b8e23a4443acaa8fbd56156d6e68b733877e1b
 
 dev_dependencies:
   flutter_test:
